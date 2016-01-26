@@ -76,7 +76,7 @@ class TokenRequestSerializer extends RequestSerializer
     {
         $requisicao = $document->createElementNS(self::NS, 'requisicao-token');
 
-        $requisicao->setAttribute('id', "8fc889c7-004f-42f1-963a-31aa26f75e5c");
+        $requisicao->setAttribute('id', md5(date("YmdHisu")));
         $requisicao->setAttribute('versao', RequestSerializer::VERSION);
 
         $requisicao->appendChild($this->createDadosEc($this->merchant, $document));
